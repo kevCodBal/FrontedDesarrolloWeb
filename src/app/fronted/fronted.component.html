@@ -1,17 +1,14 @@
+<button  (click)="showBook()" style="padding: 5px; margin-bottom: 10px;">Show Books</button>
 <div class="containerA">
-    <div class="card">
-        <img src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" alt="" style="width: 125px; object-fit: contain;">
-        <div class="container">
-            <h4>ANGULAR</h4>
-            <p>FRAMEWORK FRONTEND</p>
-        </div>
-    </div>
+
     
-    <div class="card">
-        <img src="https://springframework.guru/wp-content/uploads/2015/02/spring-framework-project-logo.png" alt="" style="width: 125px;">
+    
+    <div *ngFor="let book of listbooks; let i=index" class="card">
+        <img [src]="book.image" alt="" style="width: 200px; object-fit: contain;">
         <div class="container">
-            <h4>SPRING </h4>
-            <p>FRAMEWORK JAVA BACKEND</p>
+            <h4>{{book.titulo}} </h4>
+            <p>{{book.precio}}</p>
         </div>
+
     </div>
 </div>
